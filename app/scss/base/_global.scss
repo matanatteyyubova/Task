@@ -1,0 +1,70 @@
+/*
+   From here you can add your global style.
+   -----
+*/
+* {
+   font-family:"Inter";
+ 
+ }
+
+ .header-after_scroll {
+   position: sticky;
+   top: 0;
+   background: #fff;
+   z-index: 999999;
+   margin: 0 auto;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+a.active {
+   color: #fff;
+   background: #fdc236;
+ }
+ button{
+   cursor: pointer;
+ }
+
+ body::-webkit-scrollbar {
+   width: 4px !important;
+}
+
+body::-webkit-scrollbar-thumb {
+   background: #fdc236 !important;
+}
+
+#button{
+   display: inline-block;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #fdc236;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   width: 50px;
+   height: 50px;
+   border-radius: 8px;
+   text-align: center;
+   position: fixed;
+   bottom: 30px;
+   right: 30px;
+   transition: background-color .3s, opacity .5s, visibility .5s;
+   z-index: 6;
+   opacity: 0;
+   visibility: hidden;
+   animation: mymove .9s infinite;
+}
+@keyframes mymove {
+   from {
+       bottom: 30px;
+       transition: background-color .3s, opacity .5s, visibility .5s;
+   }
+
+   to {
+       bottom: 33px;
+       transition: background-color .3s, opacity .5s, visibility .5s;
+   }
+}
+
+#button.show {
+   opacity: 1;
+   visibility: visible;
+}
